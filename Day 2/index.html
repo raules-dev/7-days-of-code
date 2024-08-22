@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Programación</title>
+</head>
+<body>
+    <h1>Formulario de Programación</h1>
+    <form id="formulario">
+        <label for="nombre">¿Cuál es tu nombre?</label><br>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="edad">¿Cuántos años tienes?</label><br>
+        <input type="number" id="edad" required><br><br>
+
+        <label for="lenguaje">¿Qué lenguaje de programación estás estudiando?</label><br>
+        <input type="text" id="lenguaje" required><br><br>
+
+        <button type="button" onclick="mostrarMensaje()">Enviar</button>
+    </form>
+
+    <div id="mensaje"></div>
+    <div id="preguntaGusto" style="display: none;">
+        <p id="pregunta"></p>
+        <button type="button" onclick="responderGusto(1)">SÍ</button>
+        <button type="button" onclick="responderGusto(2)">NO</button>
+    </div>
+    <div id="respuesta"></div>
+</body>
+    <script src="script.js"></script>
+</html>
