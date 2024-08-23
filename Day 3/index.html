@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Day #3 </title>
+</head>
+<body>
+    <h1>Juego de Elección de Especialización</h1>
+
+    <div id="Q1">
+        <p>Como estudiante de programación, ¿en qué área te quieres especializar: Front-End o Back-End?</p>
+        <button onclick="escogerArea('Front-End')">Front-End</button>
+        <button onclick="escogerArea('Back-End')">Back-End</button>
+    </div>
+
+    <div id="Q2" class="hidden">
+        <p id="preguntaEspecializacion"></p>
+        <button id="op1"></button>
+        <button id="op2"></button>
+    </div>
+
+    <div id="Q3" class="hidden">
+        <p>¿Deseas seguir especializándote en el área elegida o desarrollarte para convertirte en Fullstack?</p>
+        <button onclick="escogerCamino('Especializarme')">Seguir especializándome</button>
+        <button onclick="escogerCamino('Fullstack')">Convertirme en Fullstack</button>
+    </div>
+
+    <div id="Q4" class="hidden">
+        <p>¿Hay alguna otra tecnología que te gustaría aprender?</p>
+        <button onclick="preguntarOtraTecnologia('si')">Si</button>
+        <button onclick="preguntarOtraTecnologia('no')">No</button>
+        <div id="techInputContainer" class="hidden">
+            <input type="text" id="techInput" placeholder="Escribe una tecnología">
+            <button onclick="addTechnology()">Añadir</button>
+        </div>
+        <ul id="listaTecnologias"></ul>
+    </div>
+
+    <div id="mensajeFinal" class="hidden">
+        <h2 id="textoFinal"></h2>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
